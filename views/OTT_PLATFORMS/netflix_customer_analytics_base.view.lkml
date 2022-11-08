@@ -118,4 +118,9 @@ view: netflix_customer_analytics_base {
     type: count
     drill_fields: [customername]
   }
+
+  measure: average_watch_time{
+    type: average
+    sql: ${TABLE}."TOTAL_WATCH_TIME" ;;
+  }
 }
